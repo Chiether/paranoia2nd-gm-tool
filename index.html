@@ -39,9 +39,9 @@
         if(!$scope.dodge){$scope.dodge = 0;}
         if(!$scope.gm_modify){$scope.gm_modify = 0;}
         var final_score = ($scope.skill_score-0) + ($scope.pointblank-0) + ($scope.wound-0)+($scope.dodge-0)+($scope.gm_modify-0);
-        var result = d20<=final_score ? '成功!' : '失敗!';
-        if(d20 == 20){result='ファンブル!!'; }
-        if(d20 ==  1){result='クリティカル!!';}
+        var result = d20<=final_score ? '【成功】' : '【失敗】';
+        if(d20 == 20){result='【ファンブル】'; }
+        if(d20 ==  1){result='【クリティカル】';}
         $scope.result = '最終スコア:' + final_score
           + ' / D20(' + d20 + ')'
           + ' / 結果:' + result
@@ -51,7 +51,7 @@
   </script>
 </head>
 <body>
-  <h1>Paranoia 2nd - 執事ボット for ULTRAVIOLETS -</h1>
+  <h1>Paranoia 2nd - 執事ボット for ULTRAVIOLETs -</h1>
   <hr />
   <h2>命中判定</h2>
   <div ng-controller="HitCtrl">
